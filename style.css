@@ -1775,6 +1775,8 @@ section[id] {
 /* =========================================================================
    STAGGERED REVEAL — cards in the same grid fade in one after another
    instead of all at once, for a smoother "cascading" scroll feel.
+   Covers up to 16 children (the largest grid — the Explore category grid);
+   shorter grids simply never reach the higher nth-child numbers.
    ========================================================================= */
 :is(.cat-grid, .place-grid, .service-grid, .news-grid, .fact-grid,
   .why-grid, .contacts-grid, .story-grid, .near-grid)>.reveal:nth-child(1) {
@@ -1816,6 +1818,65 @@ section[id] {
   transition-delay: 0.49s;
 }
 
+:is(.cat-grid, .place-grid, .service-grid, .news-grid, .fact-grid,
+  .why-grid, .contacts-grid, .story-grid, .near-grid)>.reveal:nth-child(9) {
+  transition-delay: 0.07s;
+}
+
+:is(.cat-grid, .place-grid, .service-grid, .news-grid, .fact-grid,
+  .why-grid, .contacts-grid, .story-grid, .near-grid)>.reveal:nth-child(10) {
+  transition-delay: 0.14s;
+}
+
+:is(.cat-grid, .place-grid, .service-grid, .news-grid, .fact-grid,
+  .why-grid, .contacts-grid, .story-grid, .near-grid)>.reveal:nth-child(11) {
+  transition-delay: 0.21s;
+}
+
+:is(.cat-grid, .place-grid, .service-grid, .news-grid, .fact-grid,
+  .why-grid, .contacts-grid, .story-grid, .near-grid)>.reveal:nth-child(12) {
+  transition-delay: 0.28s;
+}
+
+:is(.cat-grid, .place-grid, .service-grid, .news-grid, .fact-grid,
+  .why-grid, .contacts-grid, .story-grid, .near-grid)>.reveal:nth-child(13) {
+  transition-delay: 0.07s;
+}
+
+:is(.cat-grid, .place-grid, .service-grid, .news-grid, .fact-grid,
+  .why-grid, .contacts-grid, .story-grid, .near-grid)>.reveal:nth-child(14) {
+  transition-delay: 0.14s;
+}
+
+:is(.cat-grid, .place-grid, .service-grid, .news-grid, .fact-grid,
+  .why-grid, .contacts-grid, .story-grid, .near-grid)>.reveal:nth-child(15) {
+  transition-delay: 0.21s;
+}
+
+:is(.cat-grid, .place-grid, .service-grid, .news-grid, .fact-grid,
+  .why-grid, .contacts-grid, .story-grid, .near-grid)>.reveal:nth-child(16) {
+  transition-delay: 0.28s;
+}
+
 .cat-grid>.reveal:nth-child(2) {
   transition-delay: 0.07s;
+}
+
+/* Cat-grid has 16 items across 4 columns (4 rows) — the shared nth-child
+   stagger above only tracks correctly for the first 8 items, so each row
+   here explicitly repeats the same smooth 4-column cascade. */
+.cat-grid>.reveal:nth-child(4n+1) {
+  transition-delay: 0s;
+}
+
+.cat-grid>.reveal:nth-child(4n+2) {
+  transition-delay: 0.07s;
+}
+
+.cat-grid>.reveal:nth-child(4n+3) {
+  transition-delay: 0.14s;
+}
+
+.cat-grid>.reveal:nth-child(4n+4) {
+  transition-delay: 0.21s;
 }
