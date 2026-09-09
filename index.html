@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namma Kolara — Everything About Kolar, In One Place</title>
+  <meta name="description"
+    content="Namma Kolara is a complete digital platform for Kolar — news, tourism, temples, history, healthcare, jobs, agriculture, events, transport, emergency info and citizen reporting, all in one place." />
+
+  <!-- Google Fonts: Sora for display headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =========================================================
+     NAVBAR — centered layout: brand left, links center, CTA right
+     ========================================================= -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <a href="#top" class="navbar__brand">
+        <img src="../images/logo.png" alt="Namma Kolara logo" />
+        <span>Namma <em>Kolara</em></span>
+      </a>
+
+      <nav class="navbar__links" id="navLinks">
+        <a href="#top" class="nav-link">Home</a>
+        <a href="#explore" class="nav-link">Explore</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#news" class="nav-link">News</a>
+        <a href="#why-us" class="nav-link">About Us</a>
+        <a href="#contacts" class="nav-link">Contacts</a>
+      </nav>
+
+      <div class="navbar__cta">
+        <a href="#report" class="btn btn--primary btn--sm">Report an Issue</a>
+      </div>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav panel (populated/toggled by script.js) -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#top">Home</a>
+    <a href="#explore">Explore</a>
+    <a href="#services">Services</a>
+    <a href="#news">News</a>
+    <a href="#why-us">About Us</a>
+    <a href="#contacts">Contacts</a>
+    <a href="#report">Report an Issue</a>
+  </div>
+
+  <main id="top">
+
+    <!-- =========================================================
+       HERO
+       ========================================================= -->
+    <section class="hero">
+      <div class="hero__glow"></div>
+      <div class="container hero__inner">
+        <div class="hero__copy reveal">
+          <div class="eyebrow">ನಮ್ಮ ಕೋಲಾರ · Digital Kolar</div>
+          <h1>Discover Kolar <span class="grad">Like Never Before</span></h1>
+          <p>Your one-stop platform for everything about Kolar places, food, hospitals, events, services and more, all
+            in a single search.</p>
+
+          <form class="hero__search" role="search" id="heroSearch">
+            <svg class="hero__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7" />
+              <path d="M21 21l-4.3-4.3" />
+            </svg>
+            <input type="text" id="heroSearchInput" placeholder="Search places, restaurants, hospitals, events..."
+              aria-label="Search Namma Kolara" />
+            <button type="submit" class="btn btn--primary btn--sm">Search</button>
+          </form>
+
+          <div class="hero__ctas">
+            <a href="#explore" class="btn btn--ghost">Explore Kolar</a>
+            <a href="#report" class="btn btn--dark">Report a Problem</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat"><b>6</b><span>Taluks covered</span></div>
+            <div class="hero__stat"><b>1000+ yrs</b><span>Of temple history</span></div>
+            <div class="hero__stat"><b>16</b><span>Service categories</span></div>
+            <div class="hero__stat"><b>24×7</b><span>Emergency info</span></div>
+          </div>
+        </div>
+        <div class="hero__art reveal">
+          <div class="hero__art-ring hero__art-ring--1"></div>
+          <div class="hero__art-ring hero__art-ring--2"></div>
+
+          <div class="hero__art-center">
+            <img src="/images/preview-as-circle.png" alt="Kolaramma Temple, Kolar" />
+          </div>
+
+          <div class="hero__orbit">
+            <!-- 0deg — Explore -->
+            <div class="orbit-item" style="--angle:0deg;">
+              <div class="orbit-item__counter">
+                <div class="orbit-item__bubble" style="--icon-color: var(--sunrise);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 21s7-7.5 7-12a7 7 0 10-14 0c0 4.5 7 12 7 12z" />
+                    <circle cx="12" cy="9" r="2.3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- 45deg — Food -->
+            <div class="orbit-item" style="--angle:45deg;">
+              <div class="orbit-item__counter">
+                <div class="orbit-item__bubble" style="--icon-color: var(--gold);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M7 2v7a2 2 0 002 2v11" />
+                    <path d="M7 2v4M9 2v4" />
+                    <path d="M17 2c-2 3-2 6 0 8v10" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- 90deg — Jobs & Govt -->
+            <div class="orbit-item" style="--angle:90deg;">
+              <div class="orbit-item__counter">
+                <div class="orbit-item__bubble" style="--icon-color: var(--indigo);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 6h16v13H4z" />
+                    <path d="M4 10h16M9 6V4h6v2" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- 135deg — Events -->
+            <div class="orbit-item" style="--angle:135deg;">
+              <div class="orbit-item__counter">
+                <div class="orbit-item__bubble" style="--icon-color: var(--berry);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <rect x="4" y="5" width="16" height="15" rx="1" />
+                    <path d="M4 10h16M8 3v4M16 3v4" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- 180deg — News -->
+            <div class="orbit-item" style="--angle:180deg;">
+              <div class="orbit-item__counter">
+                <div class="orbit-item__bubble" style="--icon-color: var(--sky);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M3 11v2a2 2 0 002 2h1l3 5V4l-3 5H5a2 2 0 00-2 2z" />
+                    <path d="M14 8a4 4 0 010 8" />
+                    <path d="M17 5a8 8 0 010 14" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- 225deg — Healthcare -->
+            <div class="orbit-item" style="--angle:225deg;">
+              <div class="orbit-item__counter">
+                <div class="orbit-item__bubble" style="--icon-color: var(--sunrise);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 21s-7-4.6-7-10a4.5 4.5 0 018-2.8A4.5 4.5 0 0119 11c0 5.4-7 10-7 10z" />
+                    <path d="M12 9v4M10 11h4" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- 270deg — Education -->
+            <div class="orbit-item" style="--angle:270deg;">
+              <div class="orbit-item__counter">
+                <div class="orbit-item__bubble" style="--icon-color: var(--gold);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 3l10 5-10 5L2 8l10-5z" />
+                    <path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- 315deg — Agriculture -->
+            <div class="orbit-item" style="--angle:315deg;">
+              <div class="orbit-item__counter">
+                <div class="orbit-item__bubble" style="--icon-color: var(--indigo);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 3c3 3 5 6 5 9a5 5 0 01-10 0c0-3 2-6 5-9z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       EXPLORE / CATEGORY GRID — the 16 pillars of the platform
+       ========================================================= -->
+    <div class="section-divider" aria-hidden="true"><span class="section-divider__dot"></span></div>
+    <section class="section" id="explore">
+      <div class="container">
+        <div class="section-head section-head--center reveal" style="margin-left:auto;margin-right:auto;">
+          <div class="eyebrow" style="justify-content:center;">Explore Kolar</div>
+          <h2>Everything about Kolar, organised in one place</h2>
+          <p>From ancient temples to today's civic services — pick a category and go straight to what you need.</p>
+        </div>
+
+        <div class="cat-grid">
+
+          <a class="cat-card reveal" href="#places">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 11l9-7 9 7" />
+                <path d="M5 10v10h14V10" />
+              </svg></div>
+            <h3>Explore Kolar</h3>
+            <p>A quick tour of the district — geography, taluks and getting your bearings.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#news">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 5h16v14H4z" />
+                <path d="M8 9h8M8 13h8M8 17h4" />
+              </svg></div>
+            <h3>Local News &amp; Updates</h3>
+            <p>Municipal announcements, weather alerts and day-to-day Kolar news.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#places">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18" />
+              </svg></div>
+            <h3>Tourism &amp; Famous Places</h3>
+            <p>Antaragange, Avani, Kolar Gold Fields and more, worth the trip.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#did-you-know">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 8v5l3 3" />
+                <circle cx="12" cy="12" r="9" />
+              </svg></div>
+            <h3>History &amp; Culture</h3>
+            <p>From the Gangas and Cholas to the Vijayanagara era and beyond.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#places">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 3v18M6 3l10 4-10 4" />
+                <path d="M18 13v8" />
+              </svg></div>
+            <h3>Temples &amp; Heritage</h3>
+            <p>Kolaramma, Someshwara, Avani and the district's protected monuments.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#taste">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 21V9l8-6 8 6v12" />
+                <path d="M9 21v-6h6v6" />
+              </svg></div>
+            <h3>Food &amp; Local Business</h3>
+            <p>Eateries, markets and small businesses that keep Kolar running.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#services">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 19V6a2 2 0 012-2h9l5 5v10" />
+                <path d="M9 22V16h6v6" />
+              </svg></div>
+            <h3>Education</h3>
+            <p>Schools, colleges and skilling institutes across the district.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#services">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 21s-7-4.6-7-10a4.5 4.5 0 018-2.8A4.5 4.5 0 0119 11c0 5.4-7 10-7 10z" />
+              </svg></div>
+            <h3>Hospitals &amp; Healthcare</h3>
+            <p>Government and private hospitals, clinics and health helplines.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#contacts">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M4 6h16v13H4z" />
+                <path d="M4 10h16M9 6V4h6v2" />
+              </svg></div>
+            <h3>Government Services</h3>
+            <p>Taluk office, e-services, certificates and civic administration.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#contacts">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 21h18" />
+                <path d="M6 21V10l6-6 6 6v11" />
+                <path d="M10 21v-6h4v6" />
+              </svg></div>
+            <h3>Jobs &amp; Opportunities</h3>
+            <p>Local openings, government vacancies and skilling programmes.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#taste">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 3c3 3 5 6 5 9a5 5 0 01-10 0c0-3 2-6 5-9z" />
+              </svg></div>
+            <h3>Agriculture</h3>
+            <p>Tomato markets, mulberry silk, dairy and the farmers behind them.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#news">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="4" y="5" width="16" height="15" rx="1" />
+                <path d="M4 10h16M8 3v4M16 3v4" />
+              </svg></div>
+            <h3>Local Events &amp; Festivals</h3>
+            <p>Temple jatres, fairs and community celebrations, all year round.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#services">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="6" width="14" height="11" rx="2" />
+                <path d="M17 10h3l2 3v4h-5" />
+                <circle cx="7.5" cy="18" r="1.6" />
+                <circle cx="17.5" cy="18" r="1.6" />
+              </svg></div>
+            <h3>Transportation</h3>
+            <p>Buses, trains and routes connecting Kolar to Bengaluru and beyond.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#contacts">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" />
+              </svg></div>
+            <h3>Emergency Information</h3>
+            <p>Police, fire, ambulance and disaster-response contacts, always visible.</p>
+          </a>
+
+          <a class="cat-card reveal" href="#why-us">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="9" cy="8" r="3" />
+                <path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2" />
+                <circle cx="18" cy="8" r="2.4" />
+                <path d="M16.5 12a4.5 4.5 0 014.5 4.5V19" />
+              </svg></div>
+            <h3>Community Initiatives</h3>
+            <p>Volunteer drives, clean-up campaigns and citizen-led projects.</p>
+          </a>
+
+          <a class="cat-card cat-card--report reveal" href="#report">
+            <div class="cat-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M10.3 3.9L2.7 17a2 2 0 001.7 3h15.2a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z" />
+                <path d="M12 9v4M12 17h.01" />
+              </svg></div>
+            <h3>Report a Problem</h3>
+            <p>Pothole, garbage, drainage or any civic issue — report it in a minute.</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+    <!-- G1 — "Discover What's Near You" -->
+    <!-- G1 — "Discover What's Near You" -->
+    <div class="section-divider" aria-hidden="true"><span class="section-divider__dot"></span></div>
+    <section class="section" id="near-you">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Near You</div>
+          <h2>Discover What's Near You</h2>
+          <p>Pick your area of Kolar to see nearby places, services and businesses. Sample results shown below — connect
+            a live location API for real-time nearby listings.</p>
+        </div>
+
+        <div class="locality-picker" id="localityPicker">
+          <button class="locality-chip is-active" data-area="Kolar Town" type="button">Kolar Town</button>
+          <button class="locality-chip" data-area="KGF" type="button">KGF</button>
+          <button class="locality-chip" data-area="Bangarpet" type="button">Bangarpet</button>
+          <button class="locality-chip" data-area="Malur" type="button">Malur</button>
+          <button class="locality-chip" data-area="Srinivaspur" type="button">Srinivaspur</button>
+          <button class="locality-chip" data-area="Mulbagal" type="button">Mulbagal</button>
+          <button class="btn btn--ghost btn--sm" id="useLocationBtn" type="button">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+            </svg>
+            Use my location
+          </button>
+        </div>
+
+        <div class="near-grid" id="nearGrid">
+          <div class="near-card reveal">
+            <div class="near-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M6 3v18M6 3l10 4-10 4" />
+                <path d="M18 13v8" />
+              </svg></div>
+            <h4>Kolaramma Temple</h4>
+            <span>~1.2 km away</span>
+          </div>
+          <div class="near-card reveal">
+            <div class="near-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 21s-7-4.6-7-10a4.5 4.5 0 018-2.8A4.5 4.5 0 0119 11c0 5.4-7 10-7 10z" />
+              </svg></div>
+            <h4>District Hospital</h4>
+            <span>~2.1 km away</span>
+          </div>
+          <div class="near-card reveal">
+            <div class="near-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 21V9l8-6 8 6v12" />
+                <path d="M9 21v-6h6v6" />
+              </svg></div>
+            <h4>APMC Vegetable Market</h4>
+            <span>~1.8 km away</span>
+          </div>
+          <div class="near-card reveal">
+            <div class="near-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="6" width="14" height="11" rx="2" />
+                <path d="M17 10h3l2 3v4h-5" />
+                <circle cx="7.5" cy="18" r="1.6" />
+                <circle cx="17.5" cy="18" r="1.6" />
+              </svg></div>
+            <h4>Kolar Bus Stand</h4>
+            <span>~900 m away</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---  POPULAR PLACES / TOURISM — real photos, Wikimedia Commons
+    ========================================================= -->
+    <div class="section-divider" aria-hidden="true"><span class="section-divider__dot"></span></div>
+    <section class="section" id="places">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Tourism &amp; Heritage</div>
+          <h2>Must-Visit Places</h2>
+          <p>Ancient temples, quiet hills and living history — all within an easy drive of Kolar town.</p>
+        </div>
+
+        <div class="place-grid">
+
+          <article class="place-card reveal">
+            <div class="place-card__media">
+              <span class="place-card__chip">Temple</span>
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Kolaramma%20temple%20at%20Kolar%2C%20full%20view%20with%20main%20entrance%20and%20altar.jpg?width=700"
+                alt="Kolaramma Temple, Kolar" loading="lazy" />
+            </div>
+            <div class="place-card__body">
+              <h3>Kolaramma Temple</h3>
+              <p>A thousand-year-old shrine to the goddess who gives Kolar its name — built by the Gangas and later
+                renovated by the Cholas.</p>
+              <span class="place-card__credit">Photo: <a
+                  href="https://commons.wikimedia.org/wiki/Category:Kolaramma_Temple,_Kolar" target="_blank"
+                  rel="noopener">Wikimedia Commons</a>, CC BY-SA</span>
+            </div>
+          </article>
+
+          <article class="place-card reveal">
+            <div class="place-card__media">
+              <span class="place-card__chip">Temple</span>
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Someshvara%20Temple%20(frontal%20profile)%20at%20Kolar.JPG?width=700"
+                alt="Someshwara Temple, Kolar" loading="lazy" />
+            </div>
+            <div class="place-card__body">
+              <h3>Someshwara Temple</h3>
+              <p>An ornate 14th-century Vijayanagara-era temple with a soaring gopuram, protected by the ASI as a
+                monument of national importance.</p>
+              <span class="place-card__credit">Photo: <a
+                  href="https://commons.wikimedia.org/wiki/Category:Someshwara_Temple,_Kolar" target="_blank"
+                  rel="noopener">Wikimedia Commons</a>, CC BY-SA</span>
+            </div>
+          </article>
+
+          <article class="place-card reveal">
+            <div class="place-card__media">
+              <span class="place-card__chip">Hills</span>
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Antharagange.JPG?width=700"
+                alt="Antaragange hills, Kolar" loading="lazy" />
+            </div>
+            <div class="place-card__body">
+              <h3>Antaragange</h3>
+              <p>Known as "Dakshina Kashi", these volcanic hills hold a spring-fed temple tank and caves popular with
+                trekkers.</p>
+              <span class="place-card__credit">Photo: <a href="https://commons.wikimedia.org/wiki/Category:Kolar"
+                  target="_blank" rel="noopener">Wikimedia Commons</a>, CC BY-SA</span>
+            </div>
+          </article>
+
+          <article class="place-card reveal">
+            <div class="place-card__media">
+              <span class="place-card__chip">Heritage</span>
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Sri%20Ramalingeshwara%20Temple%2C%20Avani%2C%20Kolar%2C%20Karnataka.jpg?width=700"
+                alt="Ramalingeshwara temple group, Avani" loading="lazy" />
+            </div>
+            <div class="place-card__body">
+              <h3>Avani</h3>
+              <p>A Ramayana-linked village with a 9th-century Ramalingeshwara temple group and hills favoured by rock
+                climbers.</p>
+              <span class="place-card__credit">Photo: <a
+                  href="https://commons.wikimedia.org/wiki/Category:Ramalingeshwara_group_of_temples,_Avani"
+                  target="_blank" rel="noopener">Wikimedia Commons</a>, CC BY-SA</span>
+            </div>
+          </article>
+
+          <article class="place-card reveal">
+            <div class="place-card__media">
+              <span class="place-card__chip">History</span>
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/The%20pit-head%20frame%20of%20the%20Edgar%20Shaft%20at%20the%20Mysore%20Mines%2C%20Kolar%20Gold%20Fields.jpg?width=700"
+                alt="Kolar Gold Fields mining structure" loading="lazy" />
+            </div>
+            <div class="place-card__body">
+              <h3>Kolar Gold Fields (KGF)</h3>
+              <p>Once one of the world's deepest gold mines and India's first electrified town — now a heritage-rich
+                mining district.</p>
+              <span class="place-card__credit">Photo: <a
+                  href="https://commons.wikimedia.org/wiki/Category:Kolar_Gold_Fields" target="_blank"
+                  rel="noopener">Wikimedia Commons</a>, public domain</span>
+            </div>
+          </article>
+
+          <article class="place-card reveal">
+            <div class="place-card__media">
+              <span class="place-card__chip">Landmark</span>
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:FilePath/Allan%20-%20Mausoleum%20at%20Colar.jpg?width=700"
+                alt="Mausoleum at Kolar" loading="lazy" />
+            </div>
+            <div class="place-card__body">
+              <h3>Historic Mausoleum</h3>
+              <p>A striking Indo-Islamic era mausoleum in Kolar, a quiet reminder of the district's layered history.</p>
+              <span class="place-card__credit">Photo: <a href="https://commons.wikimedia.org/wiki/Category:Kolar"
+                  target="_blank" rel="noopener">Wikimedia Commons</a>, public domain</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- G2 — "Taste of Kolar" -->
+    <section class="section section--alt" id="taste">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Food</div>
+          <h2>Taste of Kolar</h2>
+          <p>From breakfast tiffins to a full spread — a flavour of what Kolar eats.</p>
+        </div>
+
+        <div class="place-grid">
+          <article class="place-card reveal">
+            <div class="place-card__media">
+              <span class="place-card__chip">Breakfast</span>
+              <img src="/IMAGES/idli-vada.png" alt="Idli and vada with chutney and sambar" loading="lazy" />
+            </div>
+            <div class="place-card__body">
+              <h3>Idli-Vada Sambar</h3>
+              <p>Soft steamed idlis and crisp golden vadas served with coconut chutney and sambar — an everyday tiffin
+                favourite.</p>
+            </div>
+          </article>
+
+          <article class="place-card reveal">
+            <div class="place-card__media">
+              <span class="place-card__chip">Breakfast</span>
+              <img src="/IMAGES/masala-dosa.png" alt="Crispy masala dosa with chutney and sambar" loading="lazy" />
+            </div>
+            <div class="place-card__body">
+              <h3>Masala Dosa</h3>
+              <p>A crisp rice-and-lentil crepe with spiced potato filling, a breakfast staple across Kolar's tiffin
+                centres.</p>
+            </div>
+          </article>
+
+          <article class="place-card reveal">
+            <div class="place-card__media">
+              <span class="place-card__chip">Meal</span>
+              <img src="/IMAGES/wholesome-meals.png" alt="Wholesome vegetarian thali meal" loading="lazy" />
+            </div>
+            <div class="place-card__body">
+              <h3>Wholesome Meals</h3>
+              <p>A complete plate of rice, dal, curries and roti — a balanced, home-style meal served with pride.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-divider" aria-hidden="true"><span class="section-divider__dot"></span></div>
+
+        <div class="place-grid">
+          <article class="place-card reveal">
+            <div class="place-card__media">
+              <span class="place-card__chip">Nati Style</span>
+              <img src="/IMAGES/nati-style-country-chicken.png" alt="Nati style country chicken curry" loading="lazy" />
+            </div>
+            <div class="place-card__body">
+              <h3>Nati Style Country Chicken</h3>
+              <p>Traditional nati koli, slow-cooked with rustic, handpicked spices for a bold, village-style taste.</p>
+            </div>
+          </article>
+
+          <article class="place-card reveal">
+            <div class="place-card__media">
+              <span class="place-card__chip">Biryani</span>
+              <img src="/IMAGES/mutton-biryani.png" alt="Mutton biryani served with raita" loading="lazy" />
+            </div>
+            <div class="place-card__body">
+              <h3>Mutton Biryani</h3>
+              <p>A royal blend of fragrant basmati rice, tender slow-cooked mutton and authentic whole spices.</p>
+            </div>
+          </article>
+
+          <article class="place-card reveal">
+            <div class="place-card__media">
+              <span class="place-card__chip">Biryani</span>
+              <img src="./IMAGES/chicken-biryani.png" alt="Authentic chicken biryani" loading="lazy" />
+            </div>
+            <div class="place-card__body">
+              <h3>Authentic Chicken Biryani</h3>
+              <p>Fragrant basmati rice cooked with tender chicken, real spices and fresh herbs for an unforgettable
+                meal.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCAL SERVICES — quick access
+    ========================================================= -->
+    <div class="section-divider" aria-hidden="true"><span class="section-divider__dot"></span></div>
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Essential Services</div>
+          <h2>Essential Services</h2>
+          <p>Education, healthcare, government offices and transport — the services people reach for most.</p>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-card reveal">
+            <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19V6a2 2 0 012-2h9l5 5v10" />
+                <path d="M9 22V16h6v6" />
+              </svg></div>
+            <h3>Schools &amp; Colleges</h3>
+            <p>Government &amp; private institutes</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21s-7-4.6-7-10a4.5 4.5 0 018-2.8A4.5 4.5 0 0119 11c0 5.4-7 10-7 10z" />
+              </svg></div>
+            <h3>Hospitals &amp; Clinics</h3>
+            <p>District &amp; taluk healthcare</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16v13H4z" />
+                <path d="M4 10h16M9 6V4h6v2" />
+              </svg></div>
+            <h3>Govt Offices</h3>
+            <p>Taluk &amp; district administration</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="6" width="14" height="11" rx="2" />
+                <path d="M17 10h3l2 3v4h-5" />
+                <circle cx="7.5" cy="18" r="1.6" />
+                <circle cx="17.5" cy="18" r="1.6" />
+              </svg></div>
+            <h3>Transport</h3>
+            <p>Bus &amp; rail connections</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" />
+              </svg></div>
+            <h3>Emergency Help</h3>
+            <p>Police, fire &amp; ambulance</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!---- NEWS / LATEST UPDATES
+    ========================================================= -->
+    <div class="section-divider" aria-hidden="true"><span class="section-divider__dot"></span></div>
+    <section class="section section--alt" id="news">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Latest Updates</div>
+          <h2>Latest from Kolar</h2>
+          <p>Civic announcements, weather and everyday updates from around the district.</p>
+        </div>
+
+        <div class="news-grid">
+          <!--
+            Illustrative "before" photo (potholed road, Karnataka) — swap for
+            your own real photo of the actual Kolar site whenever you have
+            one, e.g. style="background-image:url('../IMAGES/news/road-before.jpg');"
+            Once resurfacing is done, swap in an "after" photo the same way.
+          -->
+          <article class="news-card news-card--feature reveal"
+            style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Potholes%20in%20Bengaluru%20road.jpg?width=900');">
+            <span class="tag">Civic</span>
+            <h3>Road resurfacing taken up across Kolar town wards</h3>
+            <time>Updated recently</time>
+            <p>Illustrative photo — before condition shown; we'll update this once resurfacing is complete.</p>
+          </article>
+
+
+          <article class="news-card reveal">
+            <span class="tag">Weather</span>
+            <time>Daily</time>
+            <h3>Monsoon advisory for Kolar district</h3>
+            <p>Farmers advised on sowing schedule as reservoir levels are reviewed this week.</p>
+          </article>
+
+          <article class="news-card reveal">
+            <span class="tag">Health</span>
+            <time>This week</time>
+            <h3>Free health camp at District Hospital</h3>
+            <p>General check-ups and eye camp organised in partnership with local NGOs.</p>
+          </article>
+
+          <article class="news-card reveal">
+            <span class="tag">Education</span>
+            <time>This week</time>
+            <h3>Scholarship applications open for Kolar students</h3>
+            <p>State scholarship portal now accepting applications for this academic year.</p>
+          </article>
+
+          <article class="news-card reveal">
+            <span class="tag">Agriculture</span>
+            <time>This week</time>
+            <h3>Tomato prices steady at Kolar APMC yard</h3>
+            <p>Arrivals remain strong this season; the market stays among the region's largest.</p>
+          </article>
+
+          <article class="news-card reveal">
+            <span class="tag">Events</span>
+            <time>This week</time>
+            <h3>Kolaramma Temple Jatre approaching</h3>
+            <p>Preparations underway for the annual chariot festival and fair at the temple complex.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- G4 — "Stories That Make Kolar" -->
+    <section class="section" id="stories">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Stories</div>
+          <h2>Stories That Make Kolar</h2>
+          <p>The people and moments behind the district — sample stories shown, ready for real community contributions.
+          </p>
+        </div>
+        <div class="story-grid">
+          <article class="story-card story-card--warm reveal">
+            <span class="story-card__tag">Heritage</span>
+            <h3>Keeping a 1,000-Year-Old Temple Alive</h3>
+            <p>How a small group of volunteers keeps the rituals and upkeep of Kolar's oldest temples going, generation
+              after generation.</p>
+          </article>
+          <article class="story-card story-card--cool reveal">
+            <span class="story-card__tag">Livelihood</span>
+            <h3>From Loom to Market: A Weaver's Day</h3>
+            <p>A look at the early mornings and steady hands behind Kolar's silk and handloom trade.</p>
+          </article>
+          <article class="story-card story-card--dark reveal">
+            <span class="story-card__tag">Community</span>
+            <h3>The Farmers Who Feed a Region</h3>
+            <p>Inside the pre-dawn rush at the APMC yard, where Kolar's tomato farmers set prices for the day.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+       CITIZEN REPORTING — front-end ready for a real backend
+       ========================================================= -->
+    <section class="section section--alt" id="report">
+      <div class="container">
+        <div class="report reveal">
+          <div class="report__copy">
+            <div class="eyebrow">Citizen Reporting</div>
+            <h2>Report a civic problem in under a minute</h2>
+            <p>Potholes, garbage, drainage, streetlights or any infrastructure issue — tell us what's wrong and where,
+              and it gets routed to the right department.</p>
+            <div class="report__points">
+              <div class="report__point"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg> No login required to submit a report</div>
+              <div class="report__point"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg> Attach a photo to help crews find the issue faster</div>
+              <div class="report__point"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg> Track status once your backend is connected</div>
+            </div>
+          </div>
+
+          <!--
+          Backend integration note:
+          This form is intentionally plain HTML with clear name/id attributes
+          and no framework dependency, so it's easy to wire up to any backend
+          (REST API, Firebase, Google Sheets, etc). script.js currently
+          intercepts the submit event and POSTs a JSON payload to the
+          placeholder endpoint below — replace REPORT_API_ENDPOINT in
+          script.js with your real API route.
+        -->
+          <form class="report-form" id="reportForm" novalidate>
+            <div class="report-form__categories" role="radiogroup" aria-label="Issue category">
+              <div class="chip-option">
+                <input type="radio" name="category" id="cat-pothole" value="Pothole" checked />
+                <label for="cat-pothole">🕳️ Pothole</label>
+              </div>
+              <div class="chip-option">
+                <input type="radio" name="category" id="cat-garbage" value="Garbage" />
+                <label for="cat-garbage">🗑️ Garbage</label>
+              </div>
+              <div class="chip-option">
+                <input type="radio" name="category" id="cat-drainage" value="Drainage" />
+                <label for="cat-drainage">💧 Drainage</label>
+              </div>
+              <div class="chip-option">
+                <input type="radio" name="category" id="cat-streetlight" value="Streetlight" />
+                <label for="cat-streetlight">💡 Streetlight</label>
+              </div>
+              <div class="chip-option">
+                <input type="radio" name="category" id="cat-water" value="Water Supply" />
+                <label for="cat-water">🚰 Water Supply</label>
+              </div>
+              <div class="chip-option">
+                <input type="radio" name="category" id="cat-other" value="Other" />
+                <label for="cat-other">📌 Other</label>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="reportLocation">Location</label>
+              <input type="text" id="reportLocation" name="location" placeholder="Street, ward or landmark" required />
+            </div>
+
+            <div class="field">
+              <label for="reportDescription">Describe the problem</label>
+              <textarea id="reportDescription" name="description"
+                placeholder="What's the issue? Add any details that will help the team." required></textarea>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="reportName">Your name (optional)</label>
+                <input type="text" id="reportName" name="name" placeholder="Full name" />
+              </div>
+              <div class="field">
+                <label for="reportPhone">Phone (optional)</label>
+                <input type="tel" id="reportPhone" name="phone" placeholder="For follow-up" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="reportPhoto">Attach a photo (optional)</label>
+              <input type="file" id="reportPhoto" name="photo" accept="image/*" />
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block">Submit Report</button>
+            <p class="report-form__note">By submitting, you agree this report may be shared with the relevant municipal
+              department for action.</p>
+            <div class="form-status" id="reportStatus" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- G5 — "Explore Kolar on Map" -->
+    <div class="section-divider" aria-hidden="true"><span class="section-divider__dot"></span></div>
+    <section class="section section--alt" id="map">
+      <div class="container">
+        <div class="section-head section-head--center reveal" style="margin-left:auto;margin-right:auto;">
+          <div class="eyebrow" style="justify-content:center;">Find Your Way</div>
+          <h2>Explore Kolar on the Map</h2>
+          <p>Get your bearings across Kolar town and its taluks.</p>
+        </div>
+        <div class="map-wrap reveal">
+          <iframe class="map-frame" src="https://www.google.com/maps?q=Kolar,+Karnataka&output=embed" loading="lazy"
+            allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Map of Kolar, Karnataka"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="did-you-know">
+      <div class="container">
+        <div class="section-head section-head--center reveal" style="margin-left:auto;margin-right:auto;">
+          <div class="eyebrow" style="justify-content:center;">Did You Know?</div>
+          <h2>Fun Facts About Kolar</h2>
+        </div>
+        <div class="fact-grid">
+          <div class="fact-card reveal"><span class="fact-card__num">1902</span>
+            <p>Kolar Gold Fields became one of the first towns in India to get electricity.</p>
+          </div>
+          <div class="fact-card reveal"><span class="fact-card__num">1000+</span>
+            <p>Years old — the Kolaramma Temple, after which Kolar is named.</p>
+          </div>
+          <div class="fact-card reveal"><span class="fact-card__num">Top</span>
+            <p>Kolar's APMC yard is among Asia's largest tomato markets.</p>
+          </div>
+          <div class="fact-card reveal"><span class="fact-card__num">2 km+</span>
+            <p>Deep — some Kolar Gold Fields mine shafts, among the world's deepest.</p>
+          </div>
+          <div class="fact-card reveal"><span class="fact-card__num">6</span>
+            <p>Taluks make up the Kolar district: Kolar, KGF, Bangarpet, Malur, Srinivaspur &amp; Mulbagal.</p>
+          </div>
+          <div class="fact-card reveal"><span class="fact-card__num">Silk</span>
+            <p>Kolar is a long-standing mulberry sericulture hub feeding Karnataka's silk industry.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- G7 — "Why Namma Kolara?" -->
+    <div class="section-divider" aria-hidden="true"><span class="section-divider__dot"></span></div>
+    <section class="section section--alt" id="why-us">
+      <div class="container">
+        <div class="section-head section-head--center reveal" style="margin-left:auto;margin-right:auto;">
+          <div class="eyebrow" style="justify-content:center;">Why Namma Kolara</div>
+          <h2>Built for the people of Kolar</h2>
+          <p>Namma Kolara exists because Kolar deserved one simple place to find everything about the district — not ten
+            different scattered sources.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+              </svg></div>
+            <h3>Everything, One Place</h3>
+            <p>News, tourism, services and civic reporting — no more juggling ten different sources.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 21s-7-4.6-7-10a4.5 4.5 0 018-2.8A4.5 4.5 0 0119 11c0 5.4-7 10-7 10z" />
+              </svg></div>
+            <h3>Built by Locals</h3>
+            <p>Made with Kolar's own places, people and everyday needs in mind.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="9" cy="8" r="3" />
+                <path d="M2 21v-2a5 5 0 015-5h4a5 5 0 015 5v2" />
+                <circle cx="18" cy="8" r="2.4" />
+                <path d="M16.5 12a4.5 4.5 0 014.5 4.5V19" />
+              </svg></div>
+            <h3>Community Powered</h3>
+            <p>Citizens can report issues, share stories and help keep information current.</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M3 17l6-6 4 4 8-8" />
+                <path d="M14 7h7v7" />
+              </svg></div>
+            <h3>Always Growing</h3>
+            <p>New places, services and features get added as the platform grows with Kolar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =========================================================
+       IMPORTANT CONTACTS / EMERGENCY
+       ========================================================= -->
+    <div class="section-divider" aria-hidden="true"><span class="section-divider__dot"></span></div>
+    <section class="section section--alt" id="contacts">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Important Contacts</div>
+          <h2>Emergency &amp; helpline numbers</h2>
+          <p>Keep these handy — for anything more urgent, always call 112 first.</p>
+        </div>
+
+        <div class="contacts-grid">
+          <div class="contact-card contact-card--emergency reveal">
+            <div class="contact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" />
+              </svg></div>
+            <div>
+              <h4>National Emergency</h4><a href="tel:112">112</a>
+            </div>
+          </div>
+          <div class="contact-card contact-card--emergency reveal">
+            <div class="contact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M12 21s-7-4.6-7-10a4.5 4.5 0 018-2.8A4.5 4.5 0 0119 11c0 5.4-7 10-7 10z" />
+              </svg></div>
+            <div>
+              <h4>Ambulance</h4><a href="tel:108">108</a>
+            </div>
+          </div>
+          <div class="contact-card contact-card--emergency reveal">
+            <div class="contact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M12 2C7 2 4 5 4 9c0 5 8 13 8 13s8-8 8-13c0-4-3-7-8-7z" />
+              </svg></div>
+            <div>
+              <h4>Police Control Room</h4><a href="tel:100">100</a>
+            </div>
+          </div>
+          <div class="contact-card contact-card--emergency reveal">
+            <div class="contact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M4 14a2 2 0 01-2-2v-1a2 2 0 012-2h1l1-4h12l1 4h1a2 2 0 012 2v1a2 2 0 01-2 2" />
+                <circle cx="7" cy="17" r="2" />
+                <circle cx="17" cy="17" r="2" />
+              </svg></div>
+            <div>
+              <h4>Fire Services</h4><a href="tel:101">101</a>
+            </div>
+          </div>
+          <div class="contact-card reveal">
+            <div class="contact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M4 6h16v13H4z" />
+                <path d="M4 10h16" />
+              </svg></div>
+            <div>
+              <h4>Kolar DC Office</h4><span class="num">08152-243900</span>
+            </div>
+          </div>
+          <div class="contact-card reveal">
+            <div class="contact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M12 21s-7-4.6-7-10a4.5 4.5 0 018-2.8A4.5 4.5 0 0119 11c0 5.4-7 10-7 10z" />
+              </svg></div>
+            <div>
+              <h4>District Hospital</h4><span class="num">08152-222222</span>
+            </div>
+          </div>
+          <div class="contact-card reveal">
+            <div class="contact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M12 3v18M5 8l7-5 7 5M5 8v10h14V8" />
+              </svg></div>
+            <div>
+              <h4>Electricity (BESCOM)</h4><span class="num">1912</span>
+            </div>
+          </div>
+          <div class="contact-card reveal">
+            <div class="contact-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M12 3c3 3 5 6 5 9a5 5 0 01-10 0c0-3 2-6 5-9z" />
+              </svg></div>
+            <div>
+              <h4>Water Board</h4><span class="num">08152-244900</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+  </main>
+
+  <!-- =========================================================
+     FOOTER
+     ========================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            <img src="/IMAGES/logo.png" alt="Namma Kolara logo" />
+            Namma Kolara
+          </div>
+          <p>A complete digital platform dedicated to Kolar — its people, places, services and stories, all in one home.
+          </p>
+        </div>
+        <div>
+          <h5>Explore</h5>
+          <ul class="footer__links">
+            <li><a href="#places">Tourism</a></li>
+            <li><a href="#did-you-know">History &amp; Culture</a></li>
+            <li><a href="#news">Events</a></li>
+            <li><a href="#taste">Agriculture</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <ul class="footer__links">
+            <li><a href="#services">Healthcare</a></li>
+            <li><a href="#services">Education</a></li>
+            <li><a href="#services">Transport</a></li>
+            <li><a href="#contacts">Govt Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Community</h5>
+          <ul class="footer__links">
+            <li><a href="#why-us">Initiatives</a></li>
+            <li><a href="#report">Report an Issue</a></li>
+            <li><a href="#news">Local News</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul class="footer__links">
+            <li><a href="tel:112">Emergency: 112</a></li>
+            <li><a href="#contacts">All contacts</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span id="year"></span> Namma Kolara. Built for the people of Kolar.</span>
+        <span>A community digital initiative</span>
+      </div>
+
+      <div class="footer__credits">
+        Heritage photographs courtesy of Wikimedia Commons contributors, used under
+        <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a>
+        and public-domain licences. See individual photo credits above for source links.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
