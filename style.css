@@ -1247,7 +1247,7 @@ section[id] {
 .footer__bottom {
   padding-top: 24px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
@@ -1260,6 +1260,8 @@ section[id] {
 }
 
 .footer__credits {
+  display: flex;
+  justify-content: center;
   margin-top: 6px;
   font-size: 0.74rem;
   color: rgba(255, 255, 255, 0.35);
